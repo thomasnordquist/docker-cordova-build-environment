@@ -1,5 +1,6 @@
 FROM thomasnordquist/docker-android-build-environment
 
+USER root
 RUN apt-get update \
 	&& apt-get -y --no-install-recommends install \
 		nodejs \
@@ -21,3 +22,5 @@ RUN cordova create myApp org.apache.cordova.myApp myApp \
 	&& cordova build \
 	&& cd .. \
 	&& rm -rf myApp
+
+USER build
