@@ -23,4 +23,4 @@ RUN cordova create myApp org.apache.cordova.myApp myApp \
 	&& cd .. \
 	&& rm -rf myApp
 
-USER build
+USER jenkins
