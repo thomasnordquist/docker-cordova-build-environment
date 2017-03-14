@@ -15,12 +15,4 @@ RUN npm install cordova -g
 # Don't agree to be tracked
 RUN yes n | cordova
 
-# Warm up cordovas depenecies (gradle etc.)
-RUN cordova create myApp org.apache.cordova.myApp myApp \
-	&& cd myApp \
-	&& cordova platform add android \
-	&& cordova build \
-	&& cd .. \
-	&& rm -rf myApp
-
 USER jenkins
