@@ -10,7 +10,9 @@ RUN apt-get update \
 
 # Create symlink so that cordova can find the node binary
 RUN ln -s /usr/bin/nodejs /usr/bin/node
-RUN npm install cordova -g
+RUN npm install -g \
+	cordova \
+	yarn
 
 # Don't agree to be tracked
 RUN yes n | cordova
