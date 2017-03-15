@@ -16,9 +16,6 @@ RUN apt-get update \
 		&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
-# Create symlink so that cordova can find the node binary
-RUN ln -s /usr/bin/nodejs /usr/bin/node
-
 RUN npm install -g \
         cordova \
         yarn \
