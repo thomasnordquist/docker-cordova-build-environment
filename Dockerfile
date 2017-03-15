@@ -15,7 +15,4 @@ RUN npm install -g
         yarn \
     && npm cache clean
 
-# Don't agree to be tracked
-RUN yes n | cordova
-
 USER jenkins
